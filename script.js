@@ -17,6 +17,7 @@ var n = setInterval("targetCounter()", 10);
 var j = setTimeout("ForthTest()", 100);
 var Ninetht = setInterval("NinghthTest()", 2000);
 var tw = setTimeout("WriteAbout1stTest()", 100);
+var justTIMER = setInterval("JustTimer()", 100);
 
 //var IntervalFuvcForDebug = setInterval("IntervFuncForDebug()", 500);
 
@@ -63,6 +64,7 @@ var menuBarOneTime = true;
 var menuBarLevel = 0;
 var listCloseTimer = 0;
 var registredForthTest = false;
+var TotalTime;
 
 var firstTest = true;///true
 
@@ -72,7 +74,10 @@ var firstTest = true;///true
 var TestNumber = 0;//0
 
 //var functionforDubug = setInterval("IntervFuncForDebug()", 250);
-function IntervFuncForDebug() {
+function JustTimer() {
+
+    TotalTime++;
+
     /////DEBUG/////
 
     //console.log("time:", time);
@@ -91,11 +96,12 @@ function WriteAbout1stTest(){
     if (one == true){
         ctx.font = "20px Arial";
         ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-        ctx.fillText("Pirmajā testā ar kursoru ir jānoklikšķina uz zaļajiem apļiem, jo", 50, 100);
-        ctx.fillText("ātrāk, jo labāk.", 50, 150);
-        ctx.fillText("Nospiediet start lai saktu pirmu testu. ", 50, 250);
-        ctx.fillText("Turiet Ctrl un nomēriet ar peles riteni tā, lai sarkanā rāmī un sākuma poga būtu redzama.", 50, 200);
-        ctx.fillText("Spiediet pogu show video lai uzzinātu vairāk.", 50, 300);
+
+        ctx.fillText("В первом задании нужно быстро нажимать на зелёные кружки,", 50, 100);
+        ctx.fillText("чем быстрее тем лучше.", 50, 150);
+        ctx.fillText("Нажмите старт что бы начать тест. ", 50, 250);
+        ctx.fillText("Держите клавишу Ctrl и колёсиком мыши, отрегулирайте, так чтобы была видна рамка и кнопка Start.", 50, 200);
+        ctx.fillText("Нажмайте клавишу Show video что бы узнать больше.", 50, 300);
 
         document.addEventListener('DOMContentLoaded', function(){
             var v1 = document.querySelector('#v1');
@@ -832,9 +838,10 @@ if (time8 == 1500 && TestNumber == 8){
     ctx.font = "50px Arial";
     ctx.fillStyle = 'rgba(0, 0, 0, 1)';
     ctx.fillText(" ", 50, 50);
-    ctx.fillText("Paldies par jūsu uzmanību un sadarbību, lūdzu", 50, 150);
-    ctx.fillText("uzspīdiet uz pogu Save, un atsūtiet", 50, 250);
-    ctx.fillText("uz pastu brownsky98@gmail.com", 5, 350);
+
+    ctx.fillText("Спасибо за ваше внимание и соотруднечествоб пожалуйста", 50, 150);
+    ctx.fillText("нажмите кнопку Savе, и отошлите файл", 50, 250);
+    ctx.fillText("на э-почту brownsky98@gmail.com", 5, 350);
 
     document.getElementById("block2").style.display = "block";
 
@@ -999,10 +1006,11 @@ else {
 
             ctx.font = "40px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-            ctx.fillText("Nakamis tests būs tāds, pats", 50, 100);
-            ctx.fillText("tikai apļam būs dažādi izmērī. ", 50, 200);
-            ctx.fillText("Atkal spidiet start lai saktu nākamu testu. ", 50, 300);
-            ctx.fillText("Par katru uzdevumu ir video, spideiet show video.", 50, 400);
+
+            ctx.fillText("Следующий тест будет такой же", 50, 100);
+            ctx.fillText("только у кружки будут разного размера. ", 50, 200);
+            ctx.fillText("Снова жмите кнопку Start, что бы продолжить. ", 50, 300);
+            ctx.fillText("Для каждого задания есть видео, жмите show video.", 50, 400);
 
 
            
@@ -1125,10 +1133,11 @@ function SecondTest() {
             ctx.fillRect(0, 0, 1600, 900);
         
 
-            ctx.font = "55px Arial";
+            ctx.font = "40px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-            ctx.fillText("Nākamais tests izvadās jums web lapaspusēs.", 10, 350);
-            ctx.fillText("Jums jānoklikšķina uz meklēšanas lauka (ievade meklēšanai). ", 10, 450);
+
+            ctx.fillText("Следующий тест будет выводить вам снимки веб-страниц.", 10, 350);
+            ctx.fillText("Вам нужно нажать на поле ввода для поиска (поле поиска). ", 10, 450);
             //ctx.fillText("Nospiediet start lai saktu nākamu testu. ", 10, 550);
             //var img = new Image();
             var eximg = document.getElementById("img1example");
@@ -1250,8 +1259,9 @@ function NinghthTest() {
 
             ctx.font = "55px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-            ctx.fillText("Nākama tests izvadās jums astoņus aplīšus.", 10, 350);
-            ctx.fillText("Jums jānospiež uz aplītī ar ‘+’. ", 10, 450);
+
+            ctx.fillText("Следующий тест выведет вам 8 синих кругов.", 10, 350);
+            ctx.fillText("Вам нужно нажать на кружок с ‘+’. ", 10, 450);
             //ctx.fillText("Nospiediet start lai saktu nākamu testu. ", 10, 550);
 
 
@@ -1447,7 +1457,7 @@ else{
             forthTest = true;
             TestNumber = 4;
             
-            document.getElementById("block2").style.display = "block";
+           // document.getElementById("block2").style.display = "block";
 
             ctx.beginPath();
             ctx.fillStyle = 'rgba(255, 255, 255, 1)';
@@ -1457,13 +1467,9 @@ else{
             
             ctx.font = "20px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-            ctx.fillText("Paldies par jūsu uzmanību un sadarbību, lūdzu", 50, 200);
-            ctx.fillText("uzspīdiet uz pogu Save, un atsūtiet", 50, 250);
-            ctx.fillText("uz pastu brownsky98@gmail.com", 50, 300);
-            ctx.fillText("Vai spiediet pogu start lai izdarītu", 50, 350);
-            ctx.fillText("papild testus.", 50, 400);
-            ctx.fillText("Nākama testā jums jasaliek vārdu TIMER,", 50, 450);
-            ctx.fillText("jo ātrāk, jo labāk.", 50, 500);
+
+            ctx.fillText("В следующем тесте вам нужно собрать слово TIMER,", 50, 200);
+            ctx.fillText("чем быстрее темлучше", 50, 250);
            // ctx.fillText("Nospiediet start lai saktu nākamu testu. ", 5, 350);
 
 
@@ -1742,9 +1748,9 @@ c.addEventListener('mousemove', function(evt) {
            
             ctx.font = "40px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-            ctx.fillText("Būs vel četri tādā veida uzdevumi", 50, 50);
-            ctx.fillText("Nākama jums jasaliek vārdu TIMER,", 50, 100);
-            ctx.fillText("jo ātrāk, jo labāk.", 50, 150);
+            ctx.fillText("Будет еще четыре таких заданий с словом TIMER", 50, 150);
+            ctx.fillText("В следующем тесте вам нужно собрать слово TIMER,", 50, 200);
+            ctx.fillText("чем быстрее темлучше", 50, 250);
             //ctx.fillText(" Nospiediet start lai saktu nākamu testu. ", 5, 330);
 
 
@@ -1846,8 +1852,8 @@ console.log("5555test");
 
             ctx.font = "50px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-            ctx.fillText("Nākama jums jasaliek vārdu TIMER,", 50, 50);
-            ctx.fillText("jo ātrāk, jo labāk.", 50, 150);
+            ctx.fillText("В следующем тесте вам нужно собрать слово TIMER,", 50, 200);
+            ctx.fillText("чем быстрее темлучше", 50, 250);
             //ctx.fillText("Bet tagad vel ja kursors būs ārpus burtai, kura atver", 50, 190);
             //ctx.fillText("drop-down sarakstu, un ārpus drop-down saraksta, šitais drop-down saraksts", 50, 260);
             //ctx.fillText("aizvērsies uzriez (iepriekšējos testos, tikai pēc 0.8 sekundes)", 50, 330);
@@ -1946,8 +1952,8 @@ if (TestNumber == 6 && start == true){
 
             ctx.font = "50px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-            ctx.fillText("Nākama jums jasaliek vārdu TIMER,", 50, 50);
-            ctx.fillText("jo ātrāk, jo labāk.", 50, 150);
+            ctx.fillText("В следующем тесте вам нужно собрать слово TIMER,", 50, 200);
+            ctx.fillText("чем быстрее темлучше", 50, 250);
 
 
            
@@ -2041,8 +2047,8 @@ if (TestNumber == 7 && start == true){
 
             ctx.font = "50px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-            ctx.fillText("Nākama jums jasaliek vārdu TIMER,", 50, 50);
-            ctx.fillText("jo ātrāk, jo labāk.", 50, 120);
+            ctx.fillText("В следующем тесте вам нужно собрать слово TIMER,", 50, 200);
+            ctx.fillText("чем быстрее темлучше", 50, 250);
 
 
            
@@ -2143,9 +2149,9 @@ if (TestNumber == 8 && start == true){
             ctx.font = "50px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
             ctx.fillText(" ", 50, 50);
-            ctx.fillText("Paldies par jūsu uzmanību un sadarbību, lūdzu", 50, 150);
-            ctx.fillText("uzspīdiet uz pogu Save, un atsūtiet", 50, 250);
-            ctx.fillText("uz pastu brownsky98@gmail.com", 5, 350);
+            ctx.fillText("Спасибо за ваше внимание и соотруднечествоб пожалуйста", 50, 150);
+            ctx.fillText("нажмите кнопку Savе, и отошлите файл", 50, 250);
+            ctx.fillText("на э-почту brownsky98@gmail.com", 5, 350);
 
             
         }
@@ -2806,7 +2812,7 @@ document.getElementById("draw trajectory").addEventListener("click", function ()
 
 function saveStaticDataToFile() {
     var blob = new Blob([times, "\n" , "SpawnX: ", SaveSpawnX, "\n" , " SpawnY: ", SaveSpawnY, "\n" , " CursorX: ", SaveCursorX, "\n" , " CursorY: ", SaveCursorY, "\n", "ForthTest: ", time4, ", FifthTest: ", time5, ", SixthTest: ", time6, ", SeventhTest ", time7, ", EighthTest: ", time8, "\n", "Calibration: ", calib ,  "\n", "Calibration1: ", calib1 ,  "\n", "Calibration2: ", calib2,  "\n", "ThirdTestVariant: ", rdtestVer, ", ", drtestVer, 
-"\n", pele, "\n", operatajsistema, "\n", HowOften, "\n", Temp, "\n", coordination, "\n", sport],
+"\n", pele, "\n", operatajsistema, "\n", HowOften, "\n", Temp, "\n", coordination, "\n", sport, "\n", "TotalTime: ", TotalTime],
         { type: "text/plain;charset=utf-8" });
     saveAs(blob, "static.txt");
 }
