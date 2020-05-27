@@ -112,6 +112,7 @@ function WriteAbout1stTest(){
                 canvas1.width = this.videoWidth;
                 canvas1.height = this.videoHeight;
             });
+            //
 
             var draw = function() {
                 canvas1.getContext('2d').drawImage(v1, 0, 0);
